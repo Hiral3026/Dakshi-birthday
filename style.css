@@ -1,0 +1,412 @@
+:root {
+    /* Colors */
+    --midnight-navy: #11152E;
+    --deep-purple: #4B286D;
+    --lavender: #B9A4D6;
+    --champagne-gold: #E8C878;
+    --warm-white: #FFF8EF;
+
+    /* Typography */
+    --font-heading-primary: "Cormorant Garamond", serif;
+    --font-heading-secondary: "Playfair Display", serif;
+    --font-accent: "Dancing Script", cursive;
+    --font-body: "Poppins", sans-serif;
+    --font-soft: "Nunito", sans-serif;
+    --font-ui: "Inter", sans-serif;
+}
+
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   PAGE
+========================= */
+
+body {
+    background-color: var(--midnight-navy);
+    color: var(--warm-white);
+    font-family: var(--font-body);
+    min-height: 100vh;
+}
+
+
+/* =========================
+   INTRO
+========================= */
+
+.intro {
+    min-height: 100vh;
+
+    position: relative;
+    overflow: hidden;
+
+    background-image: url("images/aurora-background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* =========================
+   CENTER DARK OVERLAY
+========================= */
+
+.intro::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            ellipse 48% 42% at 50% 50%,
+            rgba(8, 11, 30, 0.82) 0%,
+            rgba(8, 11, 30, 0.62) 35%,
+            rgba(8, 11, 30, 0.28) 60%,
+            transparent 85%
+        );
+
+    z-index: 1;
+
+    pointer-events: none;
+}
+
+/* =========================
+   CONTENT LAYER
+========================= */
+
+.intro-content {
+    position: relative;
+
+    z-index: 2;
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 2rem;
+}
+
+/* =========================
+   SPARKLING STARS
+========================= */
+
+.stars {
+    position: absolute;
+    inset: 0;
+
+    z-index: 2;
+
+    pointer-events: none;
+}
+
+.stars span {
+    position: absolute;
+
+    width: 10px;
+    height: 10px;
+
+    background: var(--warm-white);
+
+    clip-path: polygon(
+        50% 0%,
+        60% 40%,
+        100% 50%,
+        60% 60%,
+        50% 100%,
+        40% 60%,
+        0% 50%,
+        40% 40%
+    );
+
+    box-shadow:
+        0 0 8px var(--warm-white),
+        0 0 16px rgba(232, 200, 120, 0.65);
+
+    animation: twinkle 3s ease-in-out infinite;
+}
+
+
+/* STAR POSITIONS */
+
+.stars span:nth-child(1) {
+    top: 12%;
+    left: 12%;
+}
+
+.stars span:nth-child(2) {
+    top: 20%;
+    left: 27%;
+    animation-delay: 1s;
+}
+
+.stars span:nth-child(3) {
+    top: 14%;
+    left: 43%;
+    animation-delay: 2s;
+}
+
+.stars span:nth-child(4) {
+    top: 23%;
+    left: 61%;
+    animation-delay: 0.5s;
+}
+
+.stars span:nth-child(5) {
+    top: 11%;
+    left: 78%;
+    animation-delay: 1.5s;
+}
+
+.stars span:nth-child(6) {
+    top: 31%;
+    left: 88%;
+    animation-delay: 2.5s;
+}
+
+.stars span:nth-child(7) {
+    top: 38%;
+    left: 8%;
+    animation-delay: 1.2s;
+}
+
+.stars span:nth-child(8) {
+    top: 35%;
+    left: 92%;
+    animation-delay: 0.8s;
+}
+
+.stars span:nth-child(9) {
+    top: 8%;
+    left: 93%;
+    animation-delay: 1.8s;
+}
+
+.stars span:nth-child(10) {
+    top: 27%;
+    left: 48%;
+    animation-delay: 2.2s;
+}
+
+
+/* =========================
+   TWINKLE ANIMATION
+========================= */
+
+@keyframes twinkle {
+
+    0%,
+    100% {
+        opacity: 0.25;
+        transform: scale(0.7);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.5);
+    }
+}
+
+/* =========================
+   EYEBROW
+========================= */
+
+.eyebrow {
+    font-family: var(--font-accent);
+
+    font-size: 1.7rem;
+
+    color: var(--champagne-gold);
+
+    margin-bottom: 0.6rem;
+
+    letter-spacing: 0.03em;
+
+    text-shadow:
+        0 0 12px rgba(232, 200, 120, 0.25);
+}
+
+
+/* =========================
+   HEART
+========================= */
+
+.intro-heart {
+    font-size: 1.5rem;
+
+    color: var(--champagne-gold);
+
+    margin-bottom: 1.4rem;
+
+    text-shadow:
+        0 0 12px rgba(232, 200, 120, 0.35);
+}
+
+
+/* =========================
+   MAIN HEADING
+========================= */
+
+.intro h1 {
+    font-family: var(--font-heading-primary);
+
+    font-size: clamp(2.8rem, 4.5vw, 4.5rem);
+
+    font-weight: 500;
+
+    line-height: 1.05;
+
+    text-align: center;
+
+    margin-bottom: 1.2rem;
+
+    text-shadow:
+        0 0 20px rgba(255, 248, 239, 0.08);
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.intro-description {
+    font-family: var(--font-body);
+
+    font-size: 1.2rem;
+
+    line-height: 1.6;
+
+    text-align: center;
+
+    margin-bottom: 2.5rem;
+
+    opacity: 0.95;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.intro button {
+    font-family: var(--font-ui);
+
+    font-size: 0.95rem;
+
+    padding: 0.9rem 2.2rem;
+
+    color: var(--warm-white);
+
+    background: rgba(17, 21, 46, 0.45);
+
+    border: 1px solid rgba(232, 200, 120, 0.75);
+
+    border-radius: 50px;
+
+    backdrop-filter: blur(10px);
+
+    cursor: pointer;
+
+    animation: buttonGlow 3s ease-in-out infinite;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+
+.intro button:hover {
+    transform: translateY(-3px);
+
+    background: rgba(75, 40, 109, 0.55);
+
+    box-shadow:
+        0 0 20px rgba(232, 200, 120, 0.30),
+        0 0 45px rgba(232, 200, 120, 0.12);
+}
+
+@keyframes buttonGlow {
+
+    0%, 100% {
+        box-shadow:
+            0 0 0 rgba(232, 200, 120, 0);
+    }
+
+    50% {
+        box-shadow:
+            0 0 14px rgba(232, 200, 120, 0.25),
+            0 0 30px rgba(232, 200, 120, 0.10);
+    }
+
+}
+
+/* =========================
+   PENGUIN
+========================= */
+.penguins {
+    position: absolute;
+    
+    bottom: -300px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    z-index: 3;
+
+    animation: penguinPopUp 3.5s ease-out forwards;
+}
+
+.penguins img {
+    width: 300px;
+    display: block;
+}
+
+@keyframes penguinPopUp {
+
+    from {
+        bottom: -300px;
+    }
+
+    to {
+        bottom: 0;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .intro h1 {
+        font-size: 2.7rem;
+    }
+
+    .eyebrow {
+        font-size: 1.4rem;
+    }
+
+    .intro-description {
+        font-size: 0.9rem;
+
+        padding: 0 1.5rem;
+    }
+}
