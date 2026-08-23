@@ -1,11 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="birthday.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <body></body>
+    <link rel="stylesheet" href="birthday.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Dancing+Script:wght@400;500;600&family=Inter:wght@400;500&family=Nunito:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <title>Happy Birthday Dakshi</title>
+</head>
+
+<body class="birthday-page">
+
+    <!-- Birthday Music -->
+    <audio id="birthday-song" preload="auto">
+        <source src="audio/birthday-audio.mp3" type="audio/mpeg">
+    </audio>
+
+
+    <main>
+
+        <section class="birthday-reveal">
+
+            <!-- =========================
+                 CAKE
+            ========================== -->
+
+            <div class="cake-container">
+
+                <div class="cake">
+
+                    <div class="cake-plate"></div>
+
+                    <div class="cake-base">
+
+                        <div class="cake-layer cake-layer-bottom"></div>
+
+                        <div class="cake-layer cake-layer-middle"></div>
+
+                        <div class="cake-layer cake-layer-top"></div>
+
+                        <div class="frosting">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                    </div>
+
+                    <div class="candle">
+                        <div class="flame"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- FLOATING BALLOONS -->
+
+            <div class="birthday-balloons" aria-hidden="true">
+
+                <div class="balloon balloon-left-1">
+                    <div class="balloon-shape"></div>
+                    <div class="balloon-string"></div>
+                </div>
+
+                <div class="balloon balloon-left-2">
+                    <div class="balloon-shape"></div>
+                    <div class="balloon-string"></div>
+                </div>
+
+                <div class="balloon balloon-left-3">
+                    <div class="balloon-shape"></div>
+                    <div class="balloon-string"></div>
+                </div>
+
+
+                <div class="balloon balloon-right-1">
+                    <div class="balloon-shape"></div>
+                    <div class="balloon-string"></div>
+                </div>
+
+                <div class="balloon balloon-right-2">
+                    <div class="balloon-shape"></div>
+                    <div class="balloon-string"></div>
+                </div>
+
+                <div class="balloon balloon-right-3">
+                    <div class="balloon-shape"></div>
+                    <div class="balloon-string"></div>
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 BIRTHDAY MESSAGE
+            ========================== -->
+
+            <div class="birthday-message">
+
+                <h1>
+                    Happy Birthday Dakshiiii
+                </h1>
+
+            </div>
+
+
+            <!-- =========================
+                 PARTICLES
+            ========================== -->
+
+            <div class="cake-particles" aria-hidden="true">
+
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
 </html>
