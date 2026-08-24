@@ -41,3 +41,60 @@ if (birthdaySong) {
         });
 
 }
+
+/* =========================================
+   MESSAGE PAGE MUSIC
+========================================= */
+
+const backgroundMusic = document.getElementById("backgroundMusic");
+
+if (backgroundMusic) {
+
+    backgroundMusic.volume = 0.35;
+
+    backgroundMusic.play()
+        .then(() => {
+
+            console.log("Message music started!");
+
+        })
+        .catch((error) => {
+
+            console.log(
+                "Message music autoplay blocked:",
+                error
+            );
+
+        });
+
+}
+
+
+/* =========================================
+   PERSONAL LETTER
+========================================= */
+
+const openLetter = document.getElementById("openLetter");
+const letterScene = document.querySelector(".letter-scene");
+
+if (openLetter && letterScene) {
+
+    openLetter.addEventListener("click", () => {
+
+        letterScene.classList.add("open");
+
+    });
+
+}
+
+const heartButton = document.querySelector(".heart-button");
+
+if (heartButton) {
+
+    heartButton.addEventListener("click", () => {
+
+        window.location.href = "message.html";
+
+    });
+
+}
