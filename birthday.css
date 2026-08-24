@@ -1214,3 +1214,704 @@ body {
 
     }
 }
+
+/* =========================
+   FADE CAKE
+========================= */
+
+.cake-container {
+    animation:
+        cakeSceneFade 1.8s ease-in-out 15.8s forwards;
+}
+
+
+/* =========================
+   FADE BIRTHDAY TEXT
+========================= */
+.birthday-message {
+    animation:
+        birthdayTextReveal 1.5s ease-out 9s forwards,
+        cakeSceneFade 1.8s ease-in-out 15.8s forwards;
+}
+
+
+/* =========================
+   FADE PARTICLES
+========================= */
+
+.cake-particles {
+    animation:
+        cakeSceneFade 1.8s ease-in-out 15.8s forwards;
+}
+
+
+/* =========================
+   FADE BALLOONS
+========================= */
+
+.birthday-balloons {
+    animation:
+        cakeSceneFade 1.8s ease-in-out 15.8s forwards;
+}
+
+
+/* =========================
+   SCENE FADE
+========================= */
+
+@keyframes cakeSceneFade {
+
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* =========================================
+   HEART REVEAL
+========================================= */
+
+.heart-reveal {
+
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 18px;
+
+    z-index: 20;
+
+    pointer-events: none;
+
+    opacity: 0;
+
+    animation:
+        heartSceneReveal 1.8s ease-out
+        17.4s forwards;
+}
+
+
+/* =========================
+   HEART GLOW
+========================= */
+
+.heart-glow {
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(232, 200, 120, 0.30) 0%,
+            rgba(185, 164, 214, 0.18) 35%,
+            transparent 72%
+        );
+
+    filter: blur(12px);
+
+    opacity: 0;
+
+    animation:
+        heartGlow 3.5s ease-in-out
+        18.2s infinite;
+}
+
+
+/* =========================
+   HEART BUTTON
+========================= */
+
+.heart-button {
+
+    position: relative;
+
+    width: 140px;
+    height: 140px;
+
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    pointer-events: auto;
+
+    z-index: 2;
+
+    outline: none;
+}
+
+
+/* =========================
+   HEART
+========================= */
+
+.heart-shape {
+
+    display: block;
+
+    font-size: 7rem;
+
+    line-height: 1;
+
+    filter:
+        drop-shadow(
+            0 0 10px
+            rgba(232, 200, 120, 0.55)
+        )
+        drop-shadow(
+            0 0 25px
+            rgba(232, 200, 120, 0.30)
+        );
+
+    transform-origin: center;
+
+    opacity: 0;
+
+    transform: scale(0.15);
+
+    animation:
+        heartAppear 2.2s
+        cubic-bezier(0.16, 1, 0.3, 1)
+        17.6s forwards,
+
+        heartBeat 2s ease-in-out
+        20s infinite;
+}
+
+
+/* =========================
+   PRESS ME
+========================= */
+
+.heart-prompt {
+
+    position: relative;
+
+    z-index: 3;
+
+    margin: 0;
+
+    font-family: var(--font-accent);
+
+    font-size: 1.5rem;
+
+    font-weight: 400;
+
+    letter-spacing: 0.08em;
+
+    color: var(--warm-white);
+
+    text-align: center;
+
+    opacity: 0;
+
+    transform: translateY(10px);
+
+    text-shadow:
+        0 0 12px
+        rgba(255, 248, 239, 0.20);
+
+    animation:
+        heartPromptReveal 1.5s ease-out
+        19.5s forwards;
+}
+
+
+/* =========================
+   HEART SCENE APPEARS
+========================= */
+
+@keyframes heartSceneReveal {
+
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* =========================
+   HEART APPEARS
+========================= */
+
+@keyframes heartAppear {
+
+    0% {
+        opacity: 0;
+        transform: scale(0.15);
+    }
+
+    40% {
+        opacity: 1;
+        transform: scale(1.12);
+    }
+
+    60% {
+        transform: scale(0.94);
+    }
+
+    78% {
+        transform: scale(1.04);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* =========================
+   HEART BEAT
+========================= */
+
+@keyframes heartBeat {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    15% {
+        transform: scale(1.10);
+    }
+
+    30% {
+        transform: scale(1);
+    }
+
+    45% {
+        transform: scale(1.07);
+    }
+
+    60% {
+        transform: scale(1);
+    }
+}
+
+
+/* =========================
+   HEART GLOW
+========================= */
+
+@keyframes heartGlow {
+
+    0% {
+        opacity: 0.20;
+        transform: scale(0.80);
+    }
+
+    50% {
+        opacity: 0.75;
+        transform: scale(1.25);
+    }
+
+    100% {
+        opacity: 0.20;
+        transform: scale(0.80);
+    }
+}
+
+
+/* =========================
+   PROMPT APPEAR
+========================= */
+
+@keyframes heartPromptReveal {
+
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    100% {
+        opacity: 0.9;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================
+   HEART HOVER
+========================= */
+
+.heart-button:hover .heart-shape {
+
+    filter:
+        brightness(1.12)
+        drop-shadow(
+            0 0 15px
+            rgba(232, 200, 120, 0.70)
+        )
+        drop-shadow(
+            0 0 30px
+            rgba(232, 200, 120, 0.40)
+        );
+}
+
+
+/* =========================
+   HEART CLICK
+========================= */
+
+.heart-button:active .heart-shape {
+
+    transform: scale(0.92);
+}
+
+
+/* =========================
+   HEART FOCUS
+========================= */
+
+.heart-button:focus-visible {
+
+    outline:
+        1px solid var(--champagne-gold);
+
+    outline-offset: 8px;
+
+    border-radius: 50%;
+}
+
+/* =========================================
+   HEART SPRINKLE
+========================================= */
+
+.heart-sprinkle {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: 1;
+
+}
+
+
+/* Individual hearts */
+
+.heart-sprinkle span {
+
+    position: absolute;
+
+    top: -80px;
+
+    display: block;
+
+    opacity: 0;
+
+    font-size: 1.5rem;
+
+    filter:
+        drop-shadow(
+            0 0 8px
+            rgba(232, 200, 120, 0.35)
+        );
+
+    animation:
+        heartFall var(--fall-duration)
+        ease-in-out
+        var(--fall-delay)
+        infinite;
+
+}
+
+
+/* =========================================
+   DIFFERENT HEART POSITIONS
+========================================= */
+
+.heart-sprinkle span:nth-child(1) {
+    left: 3%;
+    font-size: 1.2rem;
+    --fall-duration: 8s;
+    --fall-delay: 19s;
+}
+
+.heart-sprinkle span:nth-child(2) {
+    left: 8%;
+    font-size: 2rem;
+    --fall-duration: 10s;
+    --fall-delay: 21s;
+}
+
+.heart-sprinkle span:nth-child(3) {
+    left: 14%;
+    font-size: 1.4rem;
+    --fall-duration: 7s;
+    --fall-delay: 20s;
+}
+
+.heart-sprinkle span:nth-child(4) {
+    left: 20%;
+    font-size: 2.5rem;
+    --fall-duration: 11s;
+    --fall-delay: 22s;
+}
+
+.heart-sprinkle span:nth-child(5) {
+    left: 27%;
+    font-size: 1.1rem;
+    --fall-duration: 8s;
+    --fall-delay: 19.8s;
+}
+
+.heart-sprinkle span:nth-child(6) {
+    left: 33%;
+    font-size: 2rem;
+    --fall-duration: 9s;
+    --fall-delay: 23s;
+}
+
+.heart-sprinkle span:nth-child(7) {
+    left: 39%;
+    font-size: 1.3rem;
+    --fall-duration: 7.5s;
+    --fall-delay: 20.5s;
+}
+
+.heart-sprinkle span:nth-child(8) {
+    left: 45%;
+    font-size: 2.8rem;
+    --fall-duration: 12s;
+    --fall-delay: 24s;
+}
+
+.heart-sprinkle span:nth-child(9) {
+    left: 51%;
+    font-size: 1.5rem;
+    --fall-duration: 8s;
+    --fall-delay: 21s;
+}
+
+.heart-sprinkle span:nth-child(10) {
+    left: 57%;
+    font-size: 2.2rem;
+    --fall-duration: 10s;
+    --fall-delay: 23.5s;
+}
+
+.heart-sprinkle span:nth-child(11) {
+    left: 63%;
+    font-size: 1.2rem;
+    --fall-duration: 7s;
+    --fall-delay: 20s;
+}
+
+.heart-sprinkle span:nth-child(12) {
+    left: 69%;
+    font-size: 2.6rem;
+    --fall-duration: 11s;
+    --fall-delay: 22.5s;
+}
+
+.heart-sprinkle span:nth-child(13) {
+    left: 75%;
+    font-size: 1.5rem;
+    --fall-duration: 8s;
+    --fall-delay: 19.5s;
+}
+
+.heart-sprinkle span:nth-child(14) {
+    left: 81%;
+    font-size: 2rem;
+    --fall-duration: 9s;
+    --fall-delay: 21.5s;
+}
+
+.heart-sprinkle span:nth-child(15) {
+    left: 87%;
+    font-size: 1.1rem;
+    --fall-duration: 7.5s;
+    --fall-delay: 23s;
+}
+
+.heart-sprinkle span:nth-child(16) {
+    left: 93%;
+    font-size: 2.4rem;
+    --fall-duration: 10s;
+    --fall-delay: 20.5s;
+}
+
+.heart-sprinkle span:nth-child(17) {
+    left: 11%;
+    font-size: 1.7rem;
+    --fall-duration: 9s;
+    --fall-delay: 25s;
+}
+
+.heart-sprinkle span:nth-child(18) {
+    left: 24%;
+    font-size: 1rem;
+    --fall-duration: 7s;
+    --fall-delay: 26s;
+}
+
+.heart-sprinkle span:nth-child(19) {
+    left: 36%;
+    font-size: 2.3rem;
+    --fall-duration: 10s;
+    --fall-delay: 24.5s;
+}
+
+.heart-sprinkle span:nth-child(20) {
+    left: 48%;
+    font-size: 1.1rem;
+    --fall-duration: 8s;
+    --fall-delay: 26.5s;
+}
+
+.heart-sprinkle span:nth-child(21) {
+    left: 60%;
+    font-size: 2.5rem;
+    --fall-duration: 11s;
+    --fall-delay: 25.5s;
+}
+
+.heart-sprinkle span:nth-child(22) {
+    left: 72%;
+    font-size: 1.3rem;
+    --fall-duration: 7.5s;
+    --fall-delay: 27s;
+}
+
+.heart-sprinkle span:nth-child(23) {
+    left: 84%;
+    font-size: 2rem;
+    --fall-duration: 9s;
+    --fall-delay: 24s;
+}
+
+.heart-sprinkle span:nth-child(24) {
+    left: 96%;
+    font-size: 1.4rem;
+    --fall-duration: 8s;
+    --fall-delay: 26s;
+}
+
+.heart-sprinkle span:nth-child(25) {
+    left: 17%;
+    font-size: 2.7rem;
+    --fall-duration: 12s;
+    --fall-delay: 28s;
+}
+
+.heart-sprinkle span:nth-child(26) {
+    left: 42%;
+    font-size: 1.4rem;
+    --fall-duration: 8s;
+    --fall-delay: 27.5s;
+}
+
+.heart-sprinkle span:nth-child(27) {
+    left: 66%;
+    font-size: 2.2rem;
+    --fall-duration: 10s;
+    --fall-delay: 29s;
+}
+
+.heart-sprinkle span:nth-child(28) {
+    left: 78%;
+    font-size: 1.1rem;
+    --fall-duration: 7s;
+    --fall-delay: 28.5s;
+}
+
+.heart-sprinkle span:nth-child(29) {
+    left: 90%;
+    font-size: 2.6rem;
+    --fall-duration: 11s;
+    --fall-delay: 30s;
+}
+
+
+/* =========================================
+   HEART FALL ANIMATION
+========================================= */
+
+@keyframes heartFall {
+
+    0% {
+
+        top: -80px;
+
+        opacity: 0;
+
+        transform:
+            translateX(0)
+            rotate(-15deg)
+            scale(0.8);
+    }
+
+    8% {
+
+        opacity: 0.85;
+    }
+
+    35% {
+
+        transform:
+            translateX(35px)
+            rotate(12deg)
+            scale(1);
+    }
+
+    65% {
+
+        transform:
+            translateX(-30px)
+            rotate(-10deg)
+            scale(0.92);
+    }
+
+    85% {
+
+        opacity: 0.65;
+    }
+
+    100% {
+
+        top: 110%;
+
+        opacity: 0;
+
+        transform:
+            translateX(25px)
+            rotate(18deg)
+            scale(0.85);
+    }
+}
