@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Memory Vault</title>
+
+
+    <!-- =========================
+         GOOGLE FONTS
+    ========================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Dancing+Script:wght@400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =========================
+         VAULT CSS
+    ========================== -->
+
+    <link
+        rel="stylesheet"
+        href="vault.css"
+    >
+
+</head>
+
+
+<body>
+
+    <!-- =========================================
+        BACKGROUND MUSIC
+    ========================================= -->
+
+    <div class="music-player">
+
+        <audio
+            id="vaultMusic"
+            loop
+            preload="auto"
+        >
+            <source
+                src="audio/vault-audio.mp3"
+                type="audio/mpeg"
+            >
+        </audio>
+
+    </div>
+
+
+    <!-- =====================================
+         MEMORY VAULT
+    ====================================== -->
+
+    <main class="vault-page">
+
+
+        <!-- =================================
+             BACKGROUND IMAGE
+        ================================== -->
+
+        <div
+            class="vault-background"
+            aria-hidden="true"
+        ></div>
+
+
+        <!-- =================================
+             DARK / PURPLE ATMOSPHERE
+        ================================== -->
+
+        <div
+            class="vault-overlay"
+            aria-hidden="true"
+        ></div>
+
+
+        <!-- =================================
+             CENTER CONTENT
+        ================================== -->
+
+        <section class="vault-content">
+
+
+            <!-- =================================
+                 ENTER PASSCODE HEADING
+            ================================== -->
+
+            <div class="passcode-heading">
+
+                <span class="heading-star">
+                    ✦
+                </span>
+
+                <h1>
+                    ENTER PASSCODE
+                </h1>
+
+                <span class="heading-star">
+                    ✦
+                </span>
+
+            </div>
+
+
+            <!-- =================================
+                 PASSCODE
+            ================================== -->
+
+            <div class="passcode-container">
+
+
+                <div
+                    class="passcode-inputs"
+                    id="passcodeInputs"
+                >
+
+                    <input
+                        class="code-input"
+                        type="password"
+                        maxlength="1"
+                        inputmode="numeric"
+                        autocomplete="off"
+                        aria-label="Passcode digit 1"
+                    >
+
+                    <input
+                        class="code-input"
+                        type="password"
+                        maxlength="1"
+                        inputmode="numeric"
+                        autocomplete="off"
+                        aria-label="Passcode digit 2"
+                    >
+
+                    <input
+                        class="code-input"
+                        type="password"
+                        maxlength="1"
+                        inputmode="numeric"
+                        autocomplete="off"
+                        aria-label="Passcode digit 3"
+                    >
+
+                    <input
+                        class="code-input"
+                        type="password"
+                        maxlength="1"
+                        inputmode="numeric"
+                        autocomplete="off"
+                        aria-label="Passcode digit 4"
+                    >
+
+                    <input
+                        class="code-input"
+                        type="password"
+                        maxlength="1"
+                        inputmode="numeric"
+                        autocomplete="off"
+                        aria-label="Passcode digit 5"
+                    >
+
+                    <input
+                        class="code-input"
+                        type="password"
+                        maxlength="1"
+                        inputmode="numeric"
+                        autocomplete="off"
+                        aria-label="Passcode digit 6"
+                    >
+
+                </div>
+
+
+                <!-- =================================
+                     UNLOCK BUTTON
+                ================================== -->
+
+                <button
+                    id="unlockButton"
+                    class="unlock-button"
+                    type="button"
+                >
+
+                    <span>
+                        UNLOCK
+                    </span>
+
+                    <span class="unlock-symbol">
+                        ✦
+                    </span>
+
+                </button>
+
+            </div>
+
+
+            <!-- =================================
+                 HINT
+            ================================== -->
+
+            <button
+                id="hintButton"
+                class="hint-button"
+                type="button"
+            >
+
+                <span>✦</span>
+
+                Need a hint?
+
+                <span>✦</span>
+
+            </button>
+
+
+            <!-- =================================
+                 HINT MESSAGE
+            ================================== -->
+
+            <p
+                id="hintText"
+                class="hint-text"
+            ></p>
+
+
+            <!-- =================================
+                 WRONG / SUCCESS MESSAGE
+            ================================== -->
+
+            <p
+                id="vaultMessage"
+                class="vault-message"
+            ></p>
+
+
+        </section>
+
+
+        <!-- =================================
+             TWO PEOPLE WATCHING THE SKY
+        ================================== -->
+
+        <section
+            class="watching-sky"
+            aria-hidden="true"
+        >
+
+            <img
+                src="images/passcode-mascot.png"
+                alt=""
+                class="vault-mascots"
+            >
+
+        </section>
+
+
+        <!-- =================================
+             UNLOCK EFFECT
+        ================================== -->
+
+        <div
+            id="unlockOverlay"
+            class="unlock-overlay"
+            aria-hidden="true"
+        >
+
+            <div class="unlock-sparkles">
+
+                <span>✦</span>
+                <span>✧</span>
+                <span>✦</span>
+                <span>✧</span>
+                <span>✦</span>
+                <span>✧</span>
+                <span>✦</span>
+
+            </div>
+
+        </div>
+
+
+    </main>
+
+
+    <!-- =====================================
+         JAVASCRIPT
+    ====================================== -->
+
+    <script src="vault.js"></script>
+
+</body>
+
+</html>

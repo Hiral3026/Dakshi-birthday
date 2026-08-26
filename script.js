@@ -98,3 +98,32 @@ if (heartButton) {
     });
 
 }
+
+if (openLetter && letterScene) {
+
+    openLetter.addEventListener("click", () => {
+
+        letterScene.classList.add("open");
+
+
+        /* =========================
+           JOURNEY FIREFLY
+        ========================= */
+
+        const journeyGuide =
+            document.querySelector(".journey-guide");
+
+
+        if (journeyGuide) {
+
+            setTimeout(() => {
+
+                journeyGuide.classList.add("show");
+
+            }, 5000);
+
+        }
+
+    });
+
+}

@@ -1,0 +1,1072 @@
+/* =========================================
+   COLOR PALETTE
+========================================= */
+
+:root {
+
+    --midnight-navy: #11152E;
+    --deep-purple: #4B286D;
+    --lavender: #B9A4D6;
+    --champagne-gold: #E8C878;
+    --warm-white: #F7F1E5;
+
+}
+
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html,
+body {
+
+    width: 100%;
+    height: 100%;
+
+}
+
+
+body {
+
+    overflow: hidden;
+
+    background:
+        var(--midnight-navy);
+
+    color:
+        var(--warm-white);
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+}
+
+
+/* =========================================
+   MAIN PAGE
+========================================= */
+
+.vault-page {
+
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+
+    overflow: hidden;
+
+    background:
+        var(--midnight-navy);
+
+}
+
+
+/* =========================================
+   BACKGROUND IMAGE
+========================================= */
+
+.vault-background {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-image:
+        url("images/passcode-background.png");
+
+    background-size:
+        100% 100%;
+
+    background-position:
+        center center;
+
+    background-repeat:
+        no-repeat;
+
+    z-index: 1;
+
+}
+
+
+/* =========================================
+   DARK / PURPLE ATMOSPHERE
+========================================= */
+
+.vault-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+
+        radial-gradient(
+            ellipse at center,
+            rgba(75, 40, 109, 0.05),
+            transparent 70%
+        );
+
+    pointer-events:
+        none;
+
+    z-index:
+        2;
+
+}
+
+
+/* =========================================
+   CENTER CONTENT
+========================================= */
+
+.vault-content {
+
+    position: absolute;
+
+    left: 50%;
+    top: 47%;
+
+    transform:
+        translate(-50%, -50%);
+
+    width:
+        min(700px, 90vw);
+
+    text-align:
+        center;
+
+    z-index:
+        10;
+
+}
+
+
+/* =========================================
+   ENTER PASSCODE HEADING
+========================================= */
+
+.passcode-heading {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap:
+        22px;
+
+    margin-bottom:
+        30px;
+
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.passcode-heading h1 {
+
+    margin:
+        0;
+
+    color:
+        var(--warm-white);
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(1.4rem, 2.4vw, 2rem);
+
+    font-weight:
+        500;
+
+    letter-spacing:
+        8px;
+
+    text-transform:
+        uppercase;
+
+    text-shadow:
+
+        0 0 10px
+        rgba(247, 241, 229, 0.25);
+
+}
+
+
+/* =========================================
+   DECORATIVE STARS
+========================================= */
+
+.heading-star {
+
+    color:
+        var(--champagne-gold);
+
+    font-size:
+        0.9rem;
+
+    text-shadow:
+
+        0 0 8px
+        rgba(232, 200, 120, 0.8);
+
+}
+
+
+/* =========================================
+   PASSCODE CONTAINER
+========================================= */
+
+.passcode-container {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+}
+
+
+/* =========================================
+   PASSCODE INPUTS
+========================================= */
+
+.passcode-inputs {
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    gap:
+        12px;
+
+}
+
+
+/* =========================================
+   INDIVIDUAL PASSCODE BOX
+========================================= */
+
+.code-input {
+
+    width:
+        58px;
+
+    height:
+        62px;
+
+    border:
+        1px solid
+        rgba(247, 241, 229, 0.8);
+
+    border-radius:
+        12px;
+
+    background:
+        rgba(17, 21, 46, 0.52);
+
+    backdrop-filter:
+        blur(6px);
+
+    -webkit-backdrop-filter:
+        blur(6px);
+
+    color:
+        var(--warm-white);
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        1.7rem;
+
+    font-weight:
+        500;
+
+    text-align:
+        center;
+
+    outline:
+        none;
+
+    caret-color:
+        var(--champagne-gold);
+
+    transition:
+
+        border-color 0.3s ease,
+
+        box-shadow 0.3s ease,
+
+        background 0.3s ease,
+
+        transform 0.25s ease;
+
+}
+
+
+/* =========================================
+   PASSCODE BOX FOCUS
+========================================= */
+
+.code-input:focus {
+
+    border-color:
+        var(--champagne-gold);
+
+    background:
+        rgba(75, 40, 109, 0.42);
+
+    box-shadow:
+
+        0 0 12px
+        rgba(232, 200, 120, 0.35),
+
+        0 0 28px
+        rgba(185, 164, 214, 0.12);
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+/* =========================================
+   UNLOCK BUTTON
+========================================= */
+
+.unlock-button {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        10px;
+
+    margin-top:
+        28px;
+
+    padding:
+        11px 30px;
+
+    border:
+        1px solid
+        rgba(232, 200, 120, 0.7);
+
+    border-radius:
+        30px;
+
+    background:
+        rgba(17, 21, 46, 0.55);
+
+    color:
+        var(--champagne-gold);
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        1rem;
+
+    letter-spacing:
+        3px;
+
+    cursor:
+        pointer;
+
+    transition:
+
+        background 0.3s ease,
+
+        box-shadow 0.3s ease,
+
+        transform 0.3s ease,
+
+        border-color 0.3s ease;
+
+}
+
+
+.unlock-button:hover {
+
+    background:
+        rgba(75, 40, 109, 0.45);
+
+    border-color:
+        var(--champagne-gold);
+
+    box-shadow:
+
+        0 0 18px
+        rgba(232, 200, 120, 0.3),
+
+        0 0 35px
+        rgba(75, 40, 109, 0.25);
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+.unlock-button:active {
+
+    transform:
+        translateY(0);
+
+}
+
+
+.unlock-symbol {
+
+    font-size:
+        0.85rem;
+
+    color:
+        var(--warm-white);
+
+}
+
+
+/* =========================================
+   HINT BUTTON
+========================================= */
+
+.hint-button {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        10px;
+
+    margin-top:
+        35px;
+
+    padding:
+        4px 8px;
+
+    border:
+        none;
+
+    background:
+        transparent;
+
+    color:
+        var(--lavender);
+
+    font-family:
+        "Dancing Script",
+        cursive;
+
+    font-size:
+        1.35rem;
+
+    cursor:
+        pointer;
+
+    transition:
+
+        color 0.3s ease,
+
+        text-shadow 0.3s ease,
+
+        transform 0.3s ease;
+
+}
+
+
+.hint-button span {
+
+    color:
+        var(--champagne-gold);
+
+    font-size:
+        0.7rem;
+
+}
+
+
+.hint-button:hover {
+
+    color:
+        var(--warm-white);
+
+    text-shadow:
+
+        0 0 10px
+        rgba(185, 164, 214, 0.65);
+
+    transform:
+        translateY(-1px);
+
+}
+
+
+/* =========================================
+   HINT TEXT
+========================================= */
+
+.hint-text {
+
+    min-height:
+        26px;
+
+    margin-top:
+        8px;
+
+    color:
+        var(--champagne-gold);
+
+    font-family:
+        "Dancing Script",
+        cursive;
+
+    font-size:
+        1.2rem;
+
+    opacity:
+        0;
+
+    transition:
+        opacity 0.4s ease;
+
+}
+
+
+.hint-text.show {
+
+    opacity:
+        1;
+
+}
+
+
+/* =========================================
+   VAULT MESSAGE
+========================================= */
+
+.vault-message {
+
+    min-height:
+        28px;
+
+    margin-top:
+        7px;
+
+    color:
+        var(--warm-white);
+
+    font-family:
+        "Dancing Script",
+        cursive;
+
+    font-size:
+        1.25rem;
+
+    text-shadow:
+
+        0 0 8px
+        rgba(17, 21, 46, 0.8);
+
+}
+
+
+/* =========================================
+   WRONG CODE SHAKE
+========================================= */
+
+.passcode-container.wrong {
+
+    animation:
+        wrongCodeShake 0.45s ease;
+
+}
+
+
+@keyframes wrongCodeShake {
+
+    0%,
+    100% {
+
+        transform:
+            translateX(0);
+
+    }
+
+    20% {
+
+        transform:
+            translateX(-8px);
+
+    }
+
+    40% {
+
+        transform:
+            translateX(8px);
+
+    }
+
+    60% {
+
+        transform:
+            translateX(-6px);
+
+    }
+
+    80% {
+
+        transform:
+            translateX(6px);
+
+    }
+
+}
+
+
+/* =========================================
+   TWO PEOPLE WATCHING THE SKY
+========================================= */
+
+.watching-sky {
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    bottom: 0;
+
+    width: 100%;
+
+    height: 38%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: flex-end;
+
+    pointer-events: none;
+
+    z-index: 5;
+
+}
+
+
+/* =========================================
+   MASCOTS
+========================================= */
+
+.vault-mascots {
+
+    position: absolute;
+
+    left: 50%;
+    bottom: -5px;
+
+    transform:
+        translateX(-50%);
+
+    width:
+        min(450px, 28vw);
+
+    height:
+        auto;
+
+    max-height:
+        250px;
+
+    object-fit:
+        contain;
+
+    object-position:
+        bottom center;
+
+    filter:
+
+        drop-shadow(
+            0 -8px 20px
+            rgba(75, 40, 109, 0.35)
+        );
+
+}
+
+
+/* =========================================
+   UNLOCK OVERLAY
+========================================= */
+
+.unlock-overlay {
+
+    position:
+        fixed;
+
+    inset:
+        0;
+
+    z-index:
+        100;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    background:
+
+        radial-gradient(
+            circle at center,
+            rgba(75, 40, 109, 0.7),
+            rgba(17, 21, 46, 0.85)
+        );
+
+    opacity:
+        0;
+
+    pointer-events:
+        none;
+
+}
+
+
+.unlock-overlay.active {
+
+    animation:
+        unlockFade 2.2s ease forwards;
+
+}
+
+
+.unlock-sparkles {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        25px;
+
+    color:
+        var(--champagne-gold);
+
+    font-size:
+        2.5rem;
+
+    text-shadow:
+
+        0 0 12px
+        var(--champagne-gold),
+
+        0 0 30px
+        var(--lavender);
+
+}
+
+
+.unlock-overlay.active
+.unlock-sparkles {
+
+    animation:
+        sparkleExplosion 2.2s ease forwards;
+
+}
+
+
+@keyframes unlockFade {
+
+    0% {
+
+        opacity:
+            0;
+
+    }
+
+    20% {
+
+        opacity:
+            1;
+
+    }
+
+    70% {
+
+        opacity:
+            1;
+
+    }
+
+    100% {
+
+        opacity:
+            0;
+
+    }
+
+}
+
+
+@keyframes sparkleExplosion {
+
+    0% {
+
+        opacity:
+            0;
+
+        transform:
+            scale(0.2);
+
+    }
+
+    20% {
+
+        opacity:
+            1;
+
+        transform:
+            scale(1);
+
+    }
+
+    70% {
+
+        opacity:
+            1;
+
+        transform:
+            scale(2);
+
+    }
+
+    100% {
+
+        opacity:
+            0;
+
+        transform:
+            scale(5);
+
+    }
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .passcode-inputs {
+
+        gap:
+            12px;
+
+    }
+
+
+    .code-input {
+
+        width:
+            62px;
+
+        height:
+            68px;
+
+    }
+
+
+    .passcode-heading h1 {
+
+        letter-spacing:
+            5px;
+
+    }
+
+
+    .vault-mascots {
+
+        width:
+            60vw;
+
+        max-height:
+            300px;
+
+    }
+
+
+    .watching-sky {
+
+        height:
+            34%;
+
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .vault-background {
+
+        background-position:
+            center center;
+
+    }
+
+
+    .vault-content {
+
+        top:
+            43%;
+
+        width:
+            94vw;
+
+    }
+
+
+    .passcode-heading {
+
+        gap:
+            10px;
+
+        margin-bottom:
+            22px;
+
+    }
+
+
+    .passcode-heading h1 {
+
+        font-size:
+            1rem;
+
+        letter-spacing:
+            4px;
+
+    }
+
+
+    .passcode-inputs {
+
+        gap:
+            6px;
+
+    }
+
+
+    .code-input {
+
+        width:
+            45px;
+
+        height:
+            55px;
+
+        border-radius:
+            10px;
+
+        font-size:
+            1.5rem;
+
+    }
+
+
+    .unlock-button {
+
+        margin-top:
+            22px;
+
+        padding:
+            9px 22px;
+
+    }
+
+
+    .hint-button {
+
+        margin-top:
+            25px;
+
+        font-size:
+            1.15rem;
+
+    }
+
+
+    .watching-sky {
+
+        height:
+            31%;
+
+    }
+
+
+    .vault-mascots {
+
+        width:
+            78vw;
+
+        max-height:
+            250px;
+
+        bottom:
+            -3px;
+
+    }
+
+}
