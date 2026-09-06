@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Our Memories</title>
+
+
+    <!-- GOOGLE FONTS -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:wght@400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- CSS -->
+
+    <link
+        rel="stylesheet"
+        href="memory.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         BACKGROUND MUSIC
+    ========================================= -->
+
+    <div class="music-player">
+
+        <audio
+            id="memoryMusic"
+            loop
+            preload="auto"
+        >
+
+            <source
+                src="audio/river_flows_in_you.mp3"
+                type="audio/mpeg"
+            >
+
+        </audio>
+
+    </div>
+
+
+
+    <!-- =========================================
+         FIREFLIES
+    ========================================= -->
+
+    <div
+        class="fireflies"
+        aria-hidden="true"
+    >
+
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+
+    </div>
+
+
+
+    <!-- =========================================
+         MAIN PAGE
+    ========================================= -->
+
+    <main class="memories-page">
+
+
+        <!-- =================================
+             PAGE HEADING
+        ================================= -->
+
+        <section class="memory-heading">
+
+            <h1 class="memory-title">
+                Our Memories
+            </h1>
+
+            <p class="memory-subtext">
+                A collection of moments that became our universe.
+            </p>
+
+        </section>
+
+
+
+        <!-- =================================
+             HEART CONSTELLATION
+        ================================= -->
+
+        <section class="heart-section">
+
+
+            <div class="heart-constellation">
+
+
+                <!-- =================================
+                     CONNECTING LINES
+                ================================= -->
+
+                <svg
+                    class="heart-lines"
+                    viewBox="0 0 900 650"
+                    preserveAspectRatio="none"
+                    aria-hidden="true"
+                >
+
+
+                    <!-- TOP LEFT -->
+
+                    <line
+                        x1="170"
+                        y1="190"
+                        x2="300"
+                        y2="100"
+                    />
+
+
+                    <line
+                        x1="300"
+                        y1="100"
+                        x2="450"
+                        y2="205"
+                    />
+
+
+                    <!-- TOP RIGHT -->
+
+                    <line
+                        x1="450"
+                        y1="205"
+                        x2="600"
+                        y2="100"
+                    />
+
+
+                    <line
+                        x1="600"
+                        y1="100"
+                        x2="730"
+                        y2="190"
+                    />
+
+
+                    <!-- LOWER LEFT -->
+
+                    <line
+                        x1="170"
+                        y1="190"
+                        x2="260"
+                        y2="390"
+                    />
+
+
+                    <line
+                        x1="260"
+                        y1="390"
+                        x2="390"
+                        y2="500"
+                    />
+
+
+                    <line
+                        x1="390"
+                        y1="500"
+                        x2="450"
+                        y2="550"
+                    />
+
+
+                    <!-- LOWER RIGHT -->
+
+                    <line
+                        x1="450"
+                        y1="550"
+                        x2="510"
+                        y2="500"
+                    />
+
+
+                    <line
+                        x1="510"
+                        y1="500"
+                        x2="640"
+                        y2="390"
+                    />
+
+
+                    <line
+                        x1="640"
+                        y1="390"
+                        x2="730"
+                        y2="190"
+                    />
+
+
+                </svg>
+
+
+
+                <!-- =================================
+                     MEMORY 01
+                ================================= -->
+
+                <button
+                    class="memory-star star-01"
+                    data-memory="1"
+                    aria-label="Open memory 1"
+                >
+
+                    <span class="star-symbol">
+                        ✦
+                    </span>
+
+                    <span class="star-number">
+                        01
+                    </span>
+
+                    <span class="star-label">
+                        The Beginning
+                    </span>
+
+                </button>
+
+
+
+                <!-- =================================
+                     MEMORY 02
+                ================================= -->
+
+                <button
+                    class="memory-star star-02"
+                    data-memory="2"
+                    aria-label="Open memory 2"
+                >
+
+                    <span class="star-symbol">
+                        ✦
+                    </span>
+
+                    <span class="star-number">
+                        02
+                    </span>
+
+                    <span class="star-label">
+                        First Date
+                    </span>
+
+                </button>
+
+
+
+                <!-- =================================
+                     MEMORY 03
+                ================================= -->
+
+                <button
+                    class="memory-star star-03"
+                    data-memory="3"
+                    aria-label="Open memory 3"
+                >
+
+                    <span class="star-symbol">
+                        ✦
+                    </span>
+
+                    <span class="star-number">
+                        03
+                    </span>
+
+                    <span class="star-label">
+                        That One Day
+                    </span>
+
+                </button>
+
+
+
+                <!-- =================================
+                     MEMORY 04
+                ================================= -->
+
+                <button
+                    class="memory-star star-04"
+                    data-memory="4"
+                    aria-label="Open memory 4"
+                >
+
+                    <span class="star-symbol">
+                        ✦
+                    </span>
+
+                    <span class="star-number">
+                        04
+                    </span>
+
+                    <span class="star-label">
+                        A Little Chaos
+                    </span>
+
+                </button>
+
+
+
+                <!-- =================================
+                     MEMORY 05
+                ================================= -->
+
+                <button
+                    class="memory-star star-05"
+                    data-memory="5"
+                    aria-label="Open memory 5"
+                >
+
+                    <span class="star-symbol">
+                        ✦
+                    </span>
+
+                    <span class="star-number">
+                        05
+                    </span>
+
+                    <span class="star-label">
+                        My Favorite
+                    </span>
+
+                </button>
+
+
+
+                <!-- =================================
+                     MEMORY 06
+                ================================= -->
+
+                <button
+                    class="memory-star star-06"
+                    data-memory="6"
+                    aria-label="Open memory 6"
+                >
+
+                    <span class="star-symbol">
+                        ✦
+                    </span>
+
+                    <span class="star-number">
+                        06
+                    </span>
+
+                    <span class="star-label">
+                        Pune will be always special
+                    </span>
+
+                </button>
+
+
+
+                <!-- =================================
+                     MEMORY 07
+                ================================= -->
+
+                <button
+                    class="memory-star star-07"
+                    data-memory="7"
+                    aria-label="Open memory 7"
+                >
+
+                    <span class="star-symbol">
+                        ✦
+                    </span>
+
+                    <span class="star-number">
+                        07
+                    </span>
+
+                    <span class="star-label">
+                        First Snow
+                    </span>
+
+                </button>
+
+
+
+                <!-- =================================
+                     MEMORY 08
+                ================================= -->
+
+                <button
+                    class="memory-star star-08"
+                    data-memory="8"
+                    aria-label="Open memory 8"
+                >
+
+                    <span class="star-symbol">
+                        ✦
+                    </span>
+
+                    <span class="star-number">
+                        08
+                    </span>
+
+                    <span class="star-label">
+                        Us
+                    </span>
+
+                </button>
+
+
+            </div>
+
+
+
+            <!-- =================================
+                 GUIDE
+            ================================= -->
+
+            <div class="explore-guide">
+
+                <div class="guide-decoration">
+
+                    <span></span>
+
+                    ✦
+
+                    <span></span>
+
+                </div>
+
+                <p>
+                    CLICK A STAR TO EXPLORE
+                </p>
+
+            </div>
+
+
+
+            <!-- =================================
+                 CONTINUE TO FINAL PAGE
+            ================================= -->
+
+            <div class="continue-section">
+
+                <a
+                    href="final.html"
+                    class="continue-button"
+                >
+                   ✦ One More Thing ✦
+                </a>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================
+             MEMORY POPUP
+        ================================= -->
+
+        <div
+            class="memory-overlay"
+            id="memoryOverlay"
+            aria-hidden="true"
+        >
+
+
+            <article
+                class="memory-popup"
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="popupTitle"
+            >
+
+
+                <!-- CLOSE -->
+
+                <button
+                    class="memory-close"
+                    id="memoryClose"
+                    type="button"
+                    aria-label="Close memory"
+                >
+                    ×
+                </button>
+
+
+
+                <!-- NUMBER -->
+
+                <div
+                    class="popup-number"
+                    id="popupNumber"
+                >
+                    01
+                </div>
+
+
+
+                <!-- DECORATION -->
+
+                <div class="popup-star">
+                    ✦
+                </div>
+
+
+
+                <!-- TITLE -->
+
+                <h2 id="popupTitle">
+                    The Beginning
+                </h2>
+
+
+
+                <!-- DATE -->
+
+                <p
+                    class="popup-date"
+                    id="popupDate"
+                >
+                    The day our story began
+                </p>
+
+
+
+                <!-- IMAGE -->
+
+                <div class="popup-image">
+
+                    <img
+                        id="popupImage"
+                        src="images/memory01.jpg"
+                        alt="Memory"
+                    >
+
+                </div>
+
+
+
+                <!-- TEXT -->
+
+                <p
+                    class="popup-text"
+                    id="popupText"
+                >
+                    This is where our story began.
+                </p>
+
+
+
+                <!-- DECORATION -->
+
+                <div class="popup-bottom-star">
+                    ✦
+                </div>
+
+
+            </article>
+
+
+        </div>
+
+
+    </main>
+
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================= -->
+
+    <script src="memory.js"></script>
+
+
+</body>
+
+</html>

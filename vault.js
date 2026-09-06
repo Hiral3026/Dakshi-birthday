@@ -196,7 +196,7 @@ function checkPasscode() {
         setTimeout(() => {
 
             window.location.href =
-                "memory.html";
+                "universe.html";
 
         }, 1800);
 

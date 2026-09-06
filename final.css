@@ -1,0 +1,1011 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            #101b38 0%,
+            #080f24 38%,
+            #030712 75%,
+            #01030a 100%
+        );
+
+    color: #fff8ef;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+}
+
+
+/* =========================================
+   MAIN PAGE
+========================================= */
+
+.birthday-page {
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    z-index: 2;
+}
+
+
+/* =========================================
+   STAR FIELD
+========================================= */
+
+.stars {
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+.stars span {
+    position: absolute;
+
+    width: 2px;
+    height: 2px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 248, 220, 0.65);
+
+    box-shadow:
+        0 0 5px rgba(255, 248, 220, 0.45);
+
+    animation:
+        starTwinkle
+        4s ease-in-out infinite;
+}
+
+
+/* =========================================
+   STAR POSITIONS
+========================================= */
+
+.stars span:nth-child(1) {
+    left: 5%;
+    top: 12%;
+    animation-delay: 1s;
+}
+
+.stars span:nth-child(2) {
+    left: 12%;
+    top: 34%;
+    animation-delay: 2.5s;
+}
+
+.stars span:nth-child(3) {
+    left: 18%;
+    top: 18%;
+    animation-delay: .5s;
+}
+
+.stars span:nth-child(4) {
+    left: 24%;
+    top: 70%;
+    animation-delay: 3s;
+}
+
+.stars span:nth-child(5) {
+    left: 31%;
+    top: 28%;
+    animation-delay: 1.5s;
+}
+
+.stars span:nth-child(6) {
+    left: 37%;
+    top: 12%;
+    animation-delay: 3.5s;
+}
+
+.stars span:nth-child(7) {
+    left: 43%;
+    top: 78%;
+    animation-delay: 2s;
+}
+
+.stars span:nth-child(8) {
+    left: 49%;
+    top: 20%;
+    animation-delay: .8s;
+}
+
+.stars span:nth-child(9) {
+    left: 56%;
+    top: 10%;
+    animation-delay: 2.8s;
+}
+
+.stars span:nth-child(10) {
+    left: 62%;
+    top: 72%;
+    animation-delay: 1.2s;
+}
+
+.stars span:nth-child(11) {
+    left: 68%;
+    top: 25%;
+    animation-delay: 3.2s;
+}
+
+.stars span:nth-child(12) {
+    left: 74%;
+    top: 14%;
+    animation-delay: .4s;
+}
+
+.stars span:nth-child(13) {
+    left: 81%;
+    top: 38%;
+    animation-delay: 2.1s;
+}
+
+.stars span:nth-child(14) {
+    left: 88%;
+    top: 18%;
+    animation-delay: 1.7s;
+}
+
+.stars span:nth-child(15) {
+    left: 94%;
+    top: 60%;
+    animation-delay: 3.7s;
+}
+
+.stars span:nth-child(16) {
+    left: 8%;
+    top: 82%;
+    animation-delay: 2.3s;
+}
+
+.stars span:nth-child(17) {
+    left: 15%;
+    top: 58%;
+    animation-delay: 1.1s;
+}
+
+.stars span:nth-child(18) {
+    left: 28%;
+    top: 88%;
+    animation-delay: 3.1s;
+}
+
+.stars span:nth-child(19) {
+    left: 35%;
+    top: 54%;
+    animation-delay: .7s;
+}
+
+.stars span:nth-child(20) {
+    left: 47%;
+    top: 92%;
+    animation-delay: 2.7s;
+}
+
+.stars span:nth-child(21) {
+    left: 53%;
+    top: 34%;
+    animation-delay: 1.4s;
+}
+
+.stars span:nth-child(22) {
+    left: 65%;
+    top: 86%;
+    animation-delay: 3.4s;
+}
+
+.stars span:nth-child(23) {
+    left: 72%;
+    top: 53%;
+    animation-delay: .9s;
+}
+
+.stars span:nth-child(24) {
+    left: 79%;
+    top: 78%;
+    animation-delay: 2.4s;
+}
+
+.stars span:nth-child(25) {
+    left: 86%;
+    top: 88%;
+    animation-delay: 1.8s;
+}
+
+.stars span:nth-child(26) {
+    left: 92%;
+    top: 32%;
+    animation-delay: 3.6s;
+}
+
+.stars span:nth-child(27) {
+    left: 3%;
+    top: 48%;
+    animation-delay: 1.9s;
+}
+
+.stars span:nth-child(28) {
+    left: 58%;
+    top: 58%;
+    animation-delay: 2.9s;
+}
+
+
+@keyframes starTwinkle {
+
+    0%,
+    100% {
+        opacity: .25;
+        transform: scale(.8);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.4);
+    }
+}
+
+
+/* =========================================
+   WISH SECTION
+========================================= */
+
+.wish-section {
+    position: relative;
+
+    width: min(700px, 90vw);
+    height: 650px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    z-index: 3;
+}
+
+
+/* =========================================
+   INITIAL WISH CONTENT
+========================================= */
+
+.wish-content {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    transform:
+        translate(-50%, -50%);
+
+    opacity: 1;
+
+    transition:
+        opacity 1.2s ease,
+        transform 1.2s ease;
+}
+
+
+/* Everything disappears together */
+
+.wish-content.fade-out {
+    opacity: 0;
+
+    transform:
+        translate(-50%, -55%)
+        scale(.97);
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   TOP STAR
+========================================= */
+
+.top-star {
+    color: #e8c878;
+
+    font-size: 1.2rem;
+
+    margin-bottom: 18px;
+
+    opacity: .8;
+
+    animation:
+        softFloat
+        3s ease-in-out infinite;
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.wish-content h1 {
+
+    font-family:
+        "Allura",
+        cursive;
+
+    font-size:
+        clamp(4rem, 8vw, 6rem);
+
+    font-weight: 400;
+
+    line-height: 1;
+
+    color: #fff8ef;
+
+    letter-spacing: .02em;
+}
+
+
+/* =========================================
+   SUBTITLE
+========================================= */
+
+.subtitle {
+
+    margin-top: 15px;
+
+    font-size: 1.15rem;
+
+    letter-spacing: .18em;
+
+    color:
+        rgba(255, 248, 239, .7);
+
+    font-weight: 300;
+}
+
+
+/* =========================================
+   CANDLES
+========================================= */
+
+.candles {
+
+    position: relative;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    gap: 22px;
+
+    margin-top: 55px;
+
+    height: 190px;
+}
+
+
+/* =========================================
+   CANDLE WRAPPER
+========================================= */
+
+.candle-wrapper {
+
+    position: relative;
+
+    width: 65px;
+    height: 175px;
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    outline: none;
+}
+
+
+.candle-wrapper:focus-visible {
+
+    outline:
+        1px solid rgba(232, 200, 120, .6);
+
+    outline-offset: 8px;
+}
+
+
+.candle-middle {
+    height: 190px;
+}
+
+
+/* =========================================
+   CANDLE BODY
+========================================= */
+
+.candle {
+
+    position: relative;
+
+    width: 42px;
+    height: 125px;
+
+    border-radius:
+        5px 5px 3px 3px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #d5bd82 0%,
+            #f3dda1 25%,
+            #fff0bd 50%,
+            #e4ca88 75%,
+            #c6aa68 100%
+        );
+
+    box-shadow:
+        inset 3px 0 5px rgba(255,255,255,.25),
+        inset -4px 0 6px rgba(70,45,15,.12),
+        0 5px 15px rgba(0,0,0,.3);
+}
+
+
+/* =========================================
+   WAX DETAIL
+========================================= */
+
+.wax-detail {
+
+    position: absolute;
+
+    top: 15px;
+    left: 8px;
+
+    width: 25px;
+    height: 1px;
+
+    background:
+        rgba(170, 135, 70, .25);
+}
+
+
+/* =========================================
+   WICK
+========================================= */
+
+.candle::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -9px;
+    left: 50%;
+
+    width: 2px;
+    height: 10px;
+
+    transform:
+        translateX(-50%);
+
+    background: #3c3021;
+}
+
+
+/* =========================================
+   CANDLE BASE
+========================================= */
+
+.candle-base {
+
+    position: absolute;
+
+    bottom: -5px;
+
+    width: 58px;
+    height: 9px;
+
+    border-radius: 50%;
+
+    background: #b99b5d;
+
+    box-shadow:
+        0 4px 8px rgba(0,0,0,.35);
+}
+
+
+/* =========================================
+   FLAME
+========================================= */
+
+.flame {
+
+    position: absolute;
+
+    bottom: 127px;
+    left: 50%;
+
+    width: 18px;
+    height: 30px;
+
+    transform:
+        translateX(-50%)
+        rotate(45deg);
+
+    border-radius:
+        50% 50% 50% 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff7c4,
+            #f5c75c 55%,
+            #e89c38
+        );
+
+    filter:
+        drop-shadow(
+            0 0 7px rgba(255,205,90,.8)
+        )
+        drop-shadow(
+            0 0 18px rgba(255,190,60,.4)
+        );
+
+    animation:
+        flameFlicker
+        .8s ease-in-out infinite alternate;
+
+    transition:
+        opacity .7s ease,
+        transform .7s ease;
+}
+
+
+.flame::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 7px;
+    height: 13px;
+
+    left: 3px;
+    top: 4px;
+
+    border-radius:
+        50% 50% 50% 0;
+
+    background: #fffdf0;
+}
+
+
+@keyframes flameFlicker {
+
+    from {
+        transform:
+            translateX(-50%)
+            rotate(42deg)
+            scale(.92);
+    }
+
+    to {
+        transform:
+            translateX(-50%)
+            rotate(48deg)
+            scale(1.08);
+    }
+}
+
+
+/* =========================================
+   INSTRUCTION
+========================================= */
+
+.instruction {
+
+    margin-top: 28px;
+
+    font-size: 1rem;
+
+    letter-spacing: .12em;
+
+    color:
+        rgba(255,248,239,.55);
+}
+
+
+/* =========================================
+   FINAL MESSAGE
+========================================= */
+
+.final-message {
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: min(500px, 85vw);
+
+    opacity: 0;
+
+    transform:
+        translate(-50%, -45%)
+        scale(.96);
+
+    pointer-events: none;
+
+    transition:
+        opacity 1.5s ease,
+        transform 1.5s ease;
+}
+
+
+/* Message appears */
+
+.final-message.show {
+
+    opacity: 1;
+
+    transform:
+        translate(-50%, -50%)
+        scale(1);
+
+    pointer-events: auto;
+}
+
+
+/* =========================================
+   MESSAGE STAR
+========================================= */
+
+.message-star {
+
+    color: #e8c878;
+
+    font-size: 1rem;
+
+    margin-bottom: 18px;
+
+    opacity: .85;
+}
+
+
+/* =========================================
+   MESSAGE TITLE
+========================================= */
+
+.final-message h2 {
+
+    font-family:
+        "Allura",
+        cursive;
+
+    font-size: 3.4rem;
+
+    font-weight: 400;
+
+    line-height: 1.1;
+
+    color: #fff8ef;
+}
+
+
+/* =========================================
+   MESSAGE TEXT
+========================================= */
+
+.final-message p {
+
+    margin-top: 16px;
+
+    font-size: 1.1rem;
+
+    line-height: 1.8;
+
+    letter-spacing: .04em;
+
+    color:
+        rgba(255,248,239,.72);
+}
+
+
+/* =========================================
+   BIRTHDAY NAME
+========================================= */
+
+.birthday-name {
+
+    margin-top: 28px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 1rem;
+
+    letter-spacing: .18em;
+
+    text-transform: uppercase;
+
+    color: #e8c878;
+}
+
+
+.birthday-name span {
+
+    display: block;
+
+    margin-top: 7px;
+
+    font-family:
+        "Allura",
+        cursive;
+
+    font-size: 3rem;
+
+    letter-spacing: 0;
+
+    text-transform: none;
+
+    color: #fff8ef;
+}
+
+
+/* =========================================
+   BOTTOM STAR
+========================================= */
+
+.message-star.bottom {
+
+    margin-top: 25px;
+
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   SHOOTING STAR
+========================================= */
+
+.shooting-star {
+
+    position: fixed;
+
+    top: 15%;
+    left: -120px;
+
+    width: 4px;
+    height: 4px;
+
+    border-radius: 50%;
+
+    background: #fffdf2;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    z-index: 20;
+
+    box-shadow:
+        0 0 8px rgba(255,250,220,.9),
+        0 0 18px rgba(255,220,130,.55);
+}
+
+
+/* Shooting star tail */
+
+.shooting-star::after {
+
+    content: "";
+
+    position: absolute;
+
+    right: 2px;
+    top: 50%;
+
+    width: 130px;
+    height: 1px;
+
+    transform:
+        translateY(-50%);
+
+    background:
+        linear-gradient(
+            to left,
+            rgba(255,250,220,.8),
+            rgba(255,220,130,.25),
+            transparent
+        );
+}
+
+
+/* =========================================
+   SHOOTING STAR ANIMATION
+========================================= */
+
+.shooting-star.fly {
+
+    animation:
+        shootingStar
+        2s
+        ease-out
+        forwards;
+}
+
+
+@keyframes shootingStar {
+
+    0% {
+
+        left: -120px;
+        top: 15%;
+
+        opacity: 0;
+
+        transform: scale(.7);
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    45% {
+        opacity: 1;
+    }
+
+    100% {
+
+        left: 110%;
+        top: 62%;
+
+        opacity: 0;
+
+        transform: scale(1);
+    }
+}
+
+
+/* =========================================
+   FLOATING STAR
+========================================= */
+
+@keyframes softFloat {
+
+    0%,
+    100% {
+        transform:
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            translateY(-5px);
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .wish-section {
+        width: 92vw;
+        height: 600px;
+    }
+
+    .wish-content h1 {
+        font-size: 4rem;
+    }
+
+    .subtitle {
+        font-size: .95rem;
+        letter-spacing: .12em;
+    }
+
+    .candles {
+        gap: 10px;
+        margin-top: 45px;
+    }
+
+    .candle-wrapper {
+        width: 55px;
+    }
+
+    .candle {
+        width: 35px;
+        height: 110px;
+    }
+
+    .candle-base {
+        width: 48px;
+    }
+
+    .flame {
+        bottom: 112px;
+    }
+
+    .final-message {
+        width: 88vw;
+    }
+
+    .final-message h2 {
+        font-size: 2.8rem;
+    }
+
+    .final-message p {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .birthday-name span {
+        font-size: 2.6rem;
+    }
+
+    .shooting-star::after {
+        width: 90px;
+    }
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .stars span,
+    .flame,
+    .top-star {
+        animation: none;
+    }
+
+    .wish-content,
+    .final-message {
+        transition-duration: .2s;
+    }
+}
